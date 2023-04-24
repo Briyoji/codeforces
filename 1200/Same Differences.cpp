@@ -1,4 +1,6 @@
 #include <iostream>
+#include <unordered_map>
+
 using namespace std;
 
 int main()
@@ -17,15 +19,16 @@ int main()
 
         for (int idx = 0; idx < length; idx++) {
             cin >> arr[idx];
+            arr[idx] -= idx;
         }
 
         int counter = 0;
         
-        // looping once.
-        for (int i = 0; i < length; i++) {
-            for (int j = i+1; j < length; j++) {
-                if (arr[j] - arr[i] == j - i) counter ++;
-            }
+        // CRUX
+
+        unordered_map <int, int> dict ;
+        for (int idx = 0; idx < length; idx ++) {
+            if 
         }
 
         // Output
